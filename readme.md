@@ -1,5 +1,6 @@
-ini kok undefined simbol?
-![Screenshot from 2025-06-29 09-02-23](https://github.com/user-attachments/assets/1f0b2de4-a0a1-427f-82f0-a715d1c59fce)
+ini jadi gini:
+![Screenshot from 2025-06-29 09-17-03](https://github.com/user-attachments/assets/b3677cee-6a5d-4372-b5aa-d1b262d346e9)
 
-ini hasilnya:
-![Screenshot from 2025-06-29 09-01-55](https://github.com/user-attachments/assets/d8712ea5-b24e-4c05-8775-18fd719132eb)
+
+ini mnakefilenya:
+![Screenshot from 2025-06-29 09-17-27](https://github.com/user-attachments/assets/c80ad0a5-a8f9-4956-8715-4cbf40aed240)
