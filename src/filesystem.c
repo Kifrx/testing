@@ -5,6 +5,7 @@
 void fsInit() {
   struct map_fs map_fs_buf;
   int i = 0;
+  int index_data;
 
   readSector(&map_fs_buf, FS_MAP_SECTOR_NUMBER);
   for (i = 0; i < 16; i++) map_fs_buf.is_used[i] = true;
@@ -21,14 +22,14 @@ void fsRead(struct file_metadata* metadata, enum fs_return* status) {
   int index= -1;
   int i;
   int j;
-
+  int index_data;
   readSector(&data_fs_buf, FS_DATA_SECTOR_NUMBER);
   readSector(&(node_fs_buf.nodes[0]), FS_NODE_SECTOR_NUMBER);
   readSector(&(node_fs_buf.nodes[32]), FS_NODE_SECTOR_NUMBER);
 
   //code
     if (metadata == NULL || metadata->node_name[0] == '\0') {
-        *status = FS_UNKOWN_ERROR;
+        *status = FS_UNKNOWN_ERROR;
         return;
     }
     
@@ -64,7 +65,7 @@ void fsRead(struct file_metadata* metadata, enum fs_return* status) {
     }
 
     metadata->filesize = 0; 
-    int index_data = node_fs_buf.nodes[index].data_index;
+    index_data = node_fs_buf.nodes[index].data_index;
 
     
     for (i = 0; i < FS_MAX_SECTOR; i++) {
