@@ -24,7 +24,6 @@ void shell() {
     else if (strcmp(cmd, "cp")) cp(cwd, arg[0], arg[1]);
     else if (strcmp(cmd, "cat")) cat(cwd, arg[0]);
     else if (strcmp(cmd, "mkdir")) mkdir(cwd, arg[0]);
-    else if (strcmp(cmd, "rm")) rm(cwd, arg[0]);
     else if (strcmp(cmd, "clear")) clearScreen();
     else printString("Invalid command\n");
   }
