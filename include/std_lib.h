@@ -14,7 +14,12 @@ void clear(byte* buf, unsigned int size);
 
 /**
  * TODO: Add your general helper function here
- * ...
  */
+void printChar(char c);
+void printString(char* str);
+void strncpy(char* dst, char* src, unsigned int n);
+void memset(byte* buf, byte val, unsigned int size);
+
+
 
 #endif // __STD_LIB_H__
