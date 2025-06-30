@@ -46,7 +46,7 @@ struct file_metadata {
 };
 
 enum fs_return {
-  FS_UNKOWN_ERROR = -1,
+  FS_UNKNOWN_ERROR = -1,
   FS_SUCCESS = 0,
 
   FS_R_NODE_NOT_FOUND = 1,
