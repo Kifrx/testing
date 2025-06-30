@@ -47,3 +47,26 @@ void clear(byte* buf, unsigned int size) {
   unsigned int i;
   for (i = 0; i < size; i++) buf[i] = 0;
 }
+
+void printChar(char c) {
+  interrupt(0x10, 0x0E00 + c, 0, 0, 0);
+}
+
+void strncpy(char* dst, char* src, unsigned int n) {
+  unsigned int i = 0;
+  while (i < n && src[i] != '\0') {
+    dst[i] = src[i];
+    i++;
+  }
+  while (i < n) {
+    dst[i++] = '\0';
+  }
+}
+
+void memset(byte* dst, byte val, unsigned int len) {
+  unsigned int i;
+  for (i = 0; i < len; i++) {
+    dst[i] = val;
+  }
+}
+
